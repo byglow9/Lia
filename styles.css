@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'JOOJ1'; /* Nome da fonte personalizada */
+    src: url('/assets/fonts/COM4DL__.TTF') format('truetype'); /* Caminho para o arquivo TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+  
+h1 {
+    font-family: 'JOOJ1', sans-serif;
+}
