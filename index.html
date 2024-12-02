@@ -6,415 +6,526 @@
     <title>Galeria com Modal Centralizado</title>
     <!-- Carregar Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com/3.4.3"></script>
+    <link rel="stylesheet" href="./output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Yuji Mai', serif;
+        }
+    </style>
 </head>
 
 <body class="bg-red-400">
-
     
-    <div class="container mx-auto p-4">
-        <h1 class="font-custom text-4xl">jooj</h1>
+    <div class="" 
+         style="background-image: url('./imgs/background.png');">
+  
+ 
+        <div class="container mx-auto p-4">
+            <h1 class="text-center mb-4 text-4xl text-black">Um pouquinho de memorias..</h1>
+    
 
 
-
-        <!-- Masonry Grid -->
-        <div class="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4 [&>img:not(:first-child)]:mt-4">
-            <!-- Imagens -->
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft1.jpeg" alt="Foto 1" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
+            <!-- Masonry Grid -->
+            <div class="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4 [&>img:not(:first-child)]:mt-4">
+                <!-- Imagens -->
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft1.jpeg" alt="Foto 1" class="w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal1').classList.remove('hidden')" class="absolute inset-0"></div>
                     </div>
-                    <div onclick="document.getElementById('modal1').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft2.jpeg" alt="Foto 2" class="w-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal2').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft3.jpeg" alt="Foto 3" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal3').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft4.jpeg" alt="Foto 4" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal4').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft5.jpeg" alt="Foto 5" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal5').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft6.jpeg" alt="Foto 6" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal6').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft7.jpeg" alt="Foto 7" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal7').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft8.jpeg" alt="Foto 8" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal8').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
                 
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft9.jpeg" alt="Foto 9" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
+                    
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft2.jpeg" alt="Foto 2" class="w-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal2').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
                     </div>
-                    <div onclick="document.getElementById('modal9').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft3.jpeg" alt="Foto 3" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal3').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft4.jpeg" alt="Foto 4" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal4').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft5.jpeg" alt="Foto 5" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal5').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft6.jpeg" alt="Foto 6" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal6').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft7.jpeg" alt="Foto 7" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal7').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft8.jpeg" alt="Foto 8" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal8').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft9.jpeg" alt="Foto 9" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal9').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft10.jpeg" alt="Foto 10" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal10').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft11.jpeg" alt="Foto 11" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal11').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft12.jpeg" alt="Foto 12" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal12').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft13.jpeg" alt="Foto 13" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal13').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
+                    
+                    <div class="relative group overflow-hidden shadow-[0_8px_15px_rgba(0,0,0,0.3)]">
+                        <img src="imgs/ft14.jpeg" alt="Foto 14" class="w-full object-cover ">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                💞
+                            </p>
+                        </div>
+                        <div onclick="document.getElementById('modal14').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
+                    </div>
                 
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft10.jpeg" alt="Foto 10" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal10').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-                
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft11.jpeg" alt="Foto 11" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal11').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-                
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft12.jpeg" alt="Foto 12" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal12').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-                
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft13.jpeg" alt="Foto 13" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal13').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
-                
-                <div class="relative group overflow-hidden ">
-                    <img src="imgs/ft14.jpeg" alt="Foto 14" class="w-full object-cover ">
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                        <p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            💞
-                        </p>
-                    </div>
-                    <div onclick="document.getElementById('modal14').classList.remove('hidden')" class="absolute inset-0 cursor-pointer"></div>
-                </div>
+
+            </div>
+        </div>
+
+    </div>   
+
+<!-- Modal 1 -->
+<div id="modal1" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal1').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft1.jpeg" 
+                alt="Foto 1" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
             
-
-        </div>
-    </div>
-
-    <!-- Modal 1 -->
-    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal1').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft1.jpeg" alt="Foto 1" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 1</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 1.</p>
-                </div>
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 1</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 2 -->
-    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal2').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft2.jpeg" alt="Foto 2" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 2</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 2.</p>
-                </div>
+<!-- Modal 2 -->
+<div id="modal2" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal2').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft2.jpeg" 
+                alt="Foto 2" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 2</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 3 -->
-    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal3').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft3.jpeg" alt="Foto 3" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 3</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 3.</p>
-                </div>
+<!-- Modal 3 -->
+<div id="modal3" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal3').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft3.jpeg" 
+                alt="Foto 3" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 3</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 4 -->
-    <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal4').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft4.jpeg" alt="Foto 4" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 4</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 4.</p>
-                </div>
+<!-- Modal 4 -->
+<div id="modal4" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal4').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft4.jpeg" 
+                alt="Foto 4" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 4</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 5 -->
-    <div id="modal5" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal5').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft5.jpeg" alt="Foto 5" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 4</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 4.</p>
-                </div>
+<!-- Modal 5 -->
+<div id="modal5" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal5').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft5.jpeg" 
+                alt="Foto 5" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 5</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 6 -->
-    <div id="modal6" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal6').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft6.jpeg" alt="Foto 6" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 4</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 4.</p>
-                </div>
+<!-- Modal 6 -->
+<div id="modal6" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal6').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft6.jpeg" 
+                alt="Foto 6" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 6</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 7 -->
-    <div id="modal7" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal7').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft7.jpeg" alt="Foto 7" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 4</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 4.</p>
-                </div>
+<!-- Modal 7 -->
+<div id="modal7" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal7').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft7.jpeg" 
+                alt="Foto 7" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 7</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 8 -->
-    <div id="modal8" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-            <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal8').classList.add('hidden')">
-                ✖
-            </button>
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2">
-                    <img src="imgs/ft8.jpeg" alt="Foto 8" class="w-full rounded-lg">
-                </div>
-                <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                    <h2 class="text-xl font-bold mb-2">Descrição da Foto 4</h2>
-                    <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 4.</p>
-                </div>
+<!-- Modal 8 -->
+<div id="modal8" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal8').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft8.jpeg" 
+                alt="Foto 8" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 8</p>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal 9 -->
-<div id="modal9" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal9').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft9.jpeg" alt="Foto 9" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 9</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 9.</p>
+<!-- Modal 9 -->
+<div id="modal9" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal9').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft9.jpeg" 
+                alt="Foto 9" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 9</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal 10 -->
-<div id="modal10" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal10').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft10.jpeg" alt="Foto 10" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 10</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 10.</p>
+<div id="modal10" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal10').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft10.jpeg" 
+                alt="Foto 10" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 10</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal 11 -->
-<div id="modal11" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal11').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft11.jpeg" alt="Foto 11" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 11</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 11.</p>
+<div id="modal11" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal11').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft11.jpeg" 
+                alt="Foto 11" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 11</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal 12 -->
-<div id="modal12" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal12').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft12.jpeg" alt="Foto 12" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 12</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 12.</p>
+<div id="modal12" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal12').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft12.jpeg" 
+                alt="Foto 12" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 12</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal 13 -->
-<div id="modal13" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal13').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft13.jpeg" alt="Foto 13" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 13</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 13.</p>
+<div id="modal13" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal13').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft13.jpeg" 
+                alt="Foto 13" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 13</p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Modal 14 -->
-<div id="modal14" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
-    <div class="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-black" onclick="document.getElementById('modal14').classList.add('hidden')">
-            ✖
-        </button>
-        <div class="flex flex-col md:flex-row">
-            <div class="md:w-1/2">
-                <img src="imgs/ft14.jpeg" alt="Foto 14" class="w-full rounded-lg">
-            </div>
-            <div class="md:w-1/2 md:pl-4 mt-4 md:mt-0">
-                <h2 class="text-xl font-bold mb-2">Descrição da Foto 14</h2>
-                <p class="text-gray-700">Aqui está uma breve descrição do momento capturado na foto 14.</p>
+<div id="modal14" 
+    class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center" 
+    onclick="document.getElementById('modal14').classList.add('hidden')">
+
+    <!-- Conteúdo do Modal -->
+    <div class="bg-white p-4 relative shadow-lg" 
+        style="border: 1px solid #ddd; border-radius: 0; box-shadow: none;" 
+        onclick="event.stopPropagation()"> <!-- Evita fechar ao clicar no conteúdo -->
+
+        <!-- Polaroid -->
+        <div class="bg-white flex flex-col items-center" style="width: 400px; border-radius: 0;">
+            <img src="imgs/ft14.jpeg" 
+                alt="Foto 13" 
+                class="w-full object-cover" 
+                style="height: 500px; border-bottom: 1px solid #ddd;">
+            
+            <!-- Descrição -->
+            <div class="bg-white text-center mt-2 w-full px-2 py-4" style="height: 50px;">
+                <p class="text-gray-700 text-sm">Descrição da Foto 13</p>
             </div>
         </div>
     </div>
 </div>
-
 
 
 </body>

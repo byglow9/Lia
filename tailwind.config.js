@@ -1,15 +1,15 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html", // Certifique-se de que o caminho do seu HTML está correto
-    "./src/**/*.{html,js}" // Se você estiver usando um diretório src, adicione aqui.
+    "./index.html",
+    "./src/**/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        custom: ['JOOJ1', 'sans-serif'], // Nome da sua fonte personalizada
+        comad: ['"COM4D"', 'sans-serif'],
+        title: ['"Yuji Mai"', 'serif'], // Certifique-se de usar o nome correto da fonte
       },
     },
   },
   plugins: [],
-}
+};
